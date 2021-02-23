@@ -1,0 +1,185 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  #switch:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  #switch:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  #switch:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  .full-screen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sign{
+      font-size: 30px;
+      display: inline-block;
+  }
+
+  #light_orange{
+      background-color: #ffcfb5;
+      margin-left: 15px;
+  }
+  #light_pink{
+      background-color: #ffcdd4;
+      margin-left: 10px;
+  }
+  #light_purple{
+      background-color: #cfccff;
+      margin-left: 12px;
+  }
+  #victory{
+      background-color: #e67701;
+  }
+  #thumbs_up{
+      background-color: #d84c6f;
+  }
+  #amazing{
+      background-color: #7941ef;
+  }
+  #v, #t, #a{
+    font-size: 29px;
+    height: fit-content;
+    width: fit-content;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    transition: innerHTML 1.5s;
+  }
+
+  #victory, #thumbs_up, #amazing{
+      height: 100%;
+      width: 0%;
+      border-radius: 5px;
+      text-align: right;
+      transition: width 1.5s;
+  }
+
+  #light_orange, #light_pink, #light_purple{
+      margin-bottom: -6px;
+      height: 30px;
+      width: 200px;
+      text-align: left;
+      border-radius: 5px;
+      display: inline-block;
+      overflow: hidden;
+  }
+
+  #camera{
+      height: 255px;
+      width: 340px;
+  }
+
+  body{
+      background-color: whitesmoke;
+  }
+
+  #sign_name{
+      margin-bottom: 20px;
+  }
+
+  #img{
+      height: 255px;
+      width: 340px;
+      border: 0px;
+  }
+
+  #capt{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    height: 40px;
+    font-size: 18px;
+    width: 100%;
+    color: whitesmoke;
+    background-color: rgb(64, 218, 205);
+    outline: 0px;
+    margin-top: 10px;
+    border: 0px;
+  }
+
+  #cont{
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 5px 5px 30px rgb(29, 29, 29);
+  }
+
+  #cont:hover{
+    box-shadow: 5px 5px 30px rgb(29, 29, 29), 10px 10px 30px rgb(29, 29, 29);
+  }
+
+  @keyframes grayscale{
+    0%{
+      filter: grayscale(0%);
+    }
+    100%{
+      filter: grayscale(90%);
+    }
+  }
+
+  @keyframes degrayscale{
+    0%{
+      filter: grayscale(90%);
+    }
+    100%{
+      filter: grayscale(0%);
+    }
+  }

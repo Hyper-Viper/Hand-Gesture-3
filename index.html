@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hand Gesture</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    </head>
+    <body>
+        <div class="full-screen" align="center" onmousedown="return false">
+            <div id="cont" style="background-color: white; border-radius: 9px; height:fit-content; overflow: hidden; width: 450px;"> 
+                <div style="font-size: 35px; margin-top: 20px; font-family: 'Courier New', Courier, monospace; font-weight: 600;">
+                    Camera Input - 
+                    <label class="switch">
+                        <input id="switch" oninput="switchonoff();" checked="true" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div id="camera"></div>
+                <img id="img"/>
+                <div id="sign_name">
+                    <span class="sign" style="margin-top: 20px;">&#x270C;</span><div id="light_orange"><div id="victory">&numsp;<span id="v">0%</span>&numsp;</div></div>
+                    <br>
+                    <span class="sign" style="margin-left: -5px;">&#128077;</span><div id="light_pink"><div id="thumbs_up">&numsp;<span id="t">0%</span>&numsp;</div></div>
+                    <br>
+                    <span class="sign">&#128076;</span><div id="light_purple"><div id="amazing">&numsp;<span id="a">0%</span>&numsp;</div></div>
+                </div>
+                <button id="capt" onclick="capture();">Capture</button>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
